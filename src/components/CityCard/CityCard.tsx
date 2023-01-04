@@ -32,7 +32,7 @@ export const CityCard = ({ id, name, dt, feels_like, temp }: TCityCard) => {
   };
 
   return (
-    <CardWrapper item onClick={() => navigate(`/${name}`)} data-testid="city-card">
+    <CardWrapper item onClick={() => navigate(`/weather/${name}`)} data-testid="city-card">
       <Card>
         <CardContent>
           <CardHeader>

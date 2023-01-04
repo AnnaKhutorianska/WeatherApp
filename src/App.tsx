@@ -1,16 +1,16 @@
 import { Provider } from "react-redux";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,  } from "react-router-dom";
 
 import { store } from "./store";
 import { WeatherCardsList, WeatherDetails } from "./pages";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/weather",
     element: <WeatherCardsList />,
   },
   {
-    path: "/:cityName",
+    path: "/weather/:cityName",
     element: <WeatherDetails />,
   },
 ]);
