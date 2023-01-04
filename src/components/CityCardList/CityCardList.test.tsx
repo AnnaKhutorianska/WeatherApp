@@ -53,7 +53,7 @@ describe("<CityCardList/>", () => {
     renderComponent(<CityCardList />, { initialState });
     const firstCityCard = screen.getAllByTestId("city-card")[0];
     userEvent.click(firstCityCard);
-    const expectedURL = `/${initialState.weather.cityList[0].name}`;
+    const expectedURL = `/weather/${initialState.weather.cityList[0].name}`;
     expect(mockNavigate).toHaveBeenCalledWith(expectedURL);
   });
 });
