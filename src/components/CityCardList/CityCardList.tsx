@@ -6,6 +6,8 @@ import { ErrorMessage } from "../ErrorMessage";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { getCityListWeather } from "../../features/slices";
 
+const initialCities: string[] = ["Kyiv", "Riga", "London", "Alaska"];
+
 export const CityCardList = () => {
   const dispatch = useAppDispatch();
   const cities = useAppSelector((state) => state.weather?.cityList);
@@ -21,8 +23,9 @@ export const CityCardList = () => {
 
     localStorage.setItem(
       "cities",
-      JSON.stringify(["Kyiv", "Riga", "London", "Alaska"])
+      JSON.stringify(initialCities)
     );
+    dispatch(getCityListWeather(initialCities));
   }, []);
 
   return (
