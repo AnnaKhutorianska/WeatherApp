@@ -20,10 +20,15 @@ export const CityCardList = () => {
   function prepareCitiesState() {
     const value = JSON.parse(localStorage.getItem("cities")!);
 
+  
+    console.log('value', value, value?.length);
+  
     if (value?.length) {
       dispatch(getCityListWeather(value));
       return;
     }
+
+    console.log('initialCities', initialCities);
 
     localStorage.setItem("cities", JSON.stringify(initialCities));
     dispatch(getCityListWeather(initialCities));
