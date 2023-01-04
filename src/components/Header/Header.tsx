@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { Button, Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import {
-  HeaderLogo,
-  HeaderWrapper,
+  ButtonAdd,
+  HeaderContainer,
+  HeaderBackground,
   Search,
   SearchIconWrapper,
   StyledInputBase,
+  SearchFieldWrapper,
 } from "./Header.style";
 import { useAppDispatch } from "../../store";
 import { getCityWeather } from "../../features/slices";
+import { Image } from "../commonComponents/Image";
 import weatherLogo from "../../assets/images/weatherIcon.png";
 
 export const Header = (): JSX.Element => {
@@ -24,25 +26,32 @@ export const Header = (): JSX.Element => {
     }
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setInputCity(e.target.value);
+  };
+
   return (
-    <HeaderWrapper>
-      <HeaderLogo src={weatherLogo} />
-      <Box sx={{ display: "flex", alignItems: "center", gap: 5 }}>
-        <Search>
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
-          <StyledInputBase
-            placeholder="Search city"
-            inputProps={{ "aria-label": "search" }}
-            value={inputCity}
-            onChange={(e) => setInputCity(e.target.value)}
-          />
-        </Search>
-        <Button variant="contained" onClick={handleClick}>
-          Add city
-        </Button>
-      </Box>
-    </HeaderWrapper>
+    <HeaderBackground data-testid="header">
+      <HeaderContainer maxWidth="lg">
+        <Image src={weatherLogo} alt="weatherLogo" width={50} height={50} />
+        <SearchFieldWrapper>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              data-testid="search-by-city"
+              placeholder="Search city"
+              inputProps={{ "aria-label": "search" }}
+              value={inputCity}
+              onChange={handleChange}
+            />
+          </Search>
+          <ButtonAdd size="small" variant="outlined" onClick={handleClick}>
+            Add city
+          </ButtonAdd>
+        </SearchFieldWrapper>
+      </HeaderContainer>
+    </HeaderBackground>
   );
 };

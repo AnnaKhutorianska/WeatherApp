@@ -1,4 +1,12 @@
-import { alpha, InputBase, styled, Toolbar } from "@mui/material";
+import {
+  alpha,
+  Box,
+  Button,
+  Container,
+  InputBase,
+  styled,
+  Toolbar,
+} from "@mui/material";
 
 export const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -31,7 +39,6 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
   borderRadius: "5px",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -44,13 +51,24 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const HeaderWrapper = styled(Toolbar)(({ theme }) => ({
+export const HeaderBackground = styled(Toolbar)({
   backgroundColor: "#e8e8e4",
-  justifyContent: "space-between",
-  marginBottom: "20px"
-}));
+  marginBottom: "40px",
+});
 
-export const HeaderLogo = styled("img")`
-  width: 50px;
-  height: 50px;
-`;
+export const ButtonAdd = styled(Button)({
+  color: "#4a4e69",
+  border: "1px solid #4a4e69",
+});
+
+export const HeaderContainer = styled(Container)({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+});
+
+export const SearchFieldWrapper = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  gap: "5px",
+});

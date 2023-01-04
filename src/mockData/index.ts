@@ -1,0 +1,1 @@
+export { cityList } from './cityList'

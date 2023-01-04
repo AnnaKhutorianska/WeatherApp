@@ -1,0 +1,182 @@
+export const cityList = [
+  {
+    coord: {
+      lon: 30.5167,
+      lat: 50.4333,
+    },
+    weather: [
+      {
+        id: 804,
+        main: "Clouds",
+        description: "overcast clouds",
+        icon: "04n",
+      },
+    ],
+    base: "stations",
+    main: {
+      temp: 7.62,
+      feels_like: 7.62,
+      temp_min: 6.45,
+      temp_max: 7.62,
+      pressure: 1021,
+      humidity: 79,
+    },
+    visibility: 10000,
+    wind: {
+      speed: 0.89,
+      deg: 235,
+      gust: 3.58,
+    },
+    clouds: {
+      all: 98,
+    },
+    dt: 1672769922,
+    sys: {
+      type: 2,
+      id: 2003742,
+      country: "UA",
+      sunrise: 1672725493,
+      sunset: 1672754751,
+    },
+    timezone: 7200,
+    id: 703448,
+    name: "Kyiv",
+    cod: 200,
+  },
+  {
+    coord: {
+      lon: -150.0003,
+      lat: 64.0003,
+    },
+    weather: [
+      {
+        id: 804,
+        main: "Clouds",
+        description: "overcast clouds",
+        icon: "04n",
+      },
+    ],
+    base: "stations",
+    main: {
+      temp: -10.36,
+      feels_like: -14.06,
+      temp_min: -10.36,
+      temp_max: -10.36,
+      pressure: 997,
+      humidity: 91,
+      sea_level: 997,
+      grnd_level: 943,
+    },
+    visibility: 10000,
+    wind: {
+      speed: 1.74,
+      deg: 151,
+      gust: 1.52,
+    },
+    clouds: {
+      all: 98,
+    },
+    dt: 1672770341,
+    sys: {
+      country: "US",
+      sunrise: 1672775236,
+      sunset: 1672791682,
+    },
+    timezone: -32400,
+    id: 5879092,
+    name: "Alaska",
+    cod: 200,
+  },
+  {
+    coord: {
+      lon: 24.0833,
+      lat: 57,
+    },
+    weather: [
+      {
+        id: 600,
+        main: "Snow",
+        description: "light snow",
+        icon: "13n",
+      },
+    ],
+    base: "stations",
+    main: {
+      temp: 1.84,
+      feels_like: -1.36,
+      temp_min: 1.62,
+      temp_max: 2.04,
+      pressure: 1015,
+      humidity: 84,
+    },
+    visibility: 10000,
+    wind: {
+      speed: 3.09,
+      deg: 290,
+    },
+    snow: {
+      "1h": 0.13,
+    },
+    clouds: {
+      all: 100,
+    },
+    dt: 1672770309,
+    sys: {
+      type: 2,
+      id: 2075320,
+      country: "LV",
+      sunrise: 1672729266,
+      sunset: 1672754066,
+    },
+    timezone: 7200,
+    id: 456173,
+    name: "Rīga",
+    cod: 200,
+  },
+  {
+    coord: {
+      lon: 34.7837,
+      lat: 31.2617,
+    },
+    weather: [
+      {
+        id: 802,
+        main: "Clouds",
+        description: "scattered clouds",
+        icon: "03n",
+      },
+    ],
+    base: "stations",
+    main: {
+      temp: 12.26,
+      feels_like: 11.42,
+      temp_min: 12.26,
+      temp_max: 12.26,
+      pressure: 1020,
+      humidity: 72,
+      sea_level: 1020,
+      grnd_level: 987,
+    },
+    visibility: 10000,
+    wind: {
+      speed: 2.2,
+      deg: 71,
+      gust: 4.01,
+    },
+    clouds: {
+      all: 46,
+    },
+    dt: 1672770341,
+    sys: {
+      type: 2,
+      id: 2002441,
+      country: "IL",
+      sunrise: 1672720795,
+      sunset: 1672757399,
+    },
+    timezone: 7200,
+    id: 295530,
+    name: "Vav",
+    cod: 200,
+  },
+];

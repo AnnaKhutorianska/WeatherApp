@@ -1,2 +1,6 @@
 export { Header } from './Header'
 export { CityCardList } from './CityCardList'
+export { WeatherForecast } from './WeatherForecast'
+export { Image } from './commonComponents/Image'
+export { CityCard } from './CityCard'
+export { ErrorMessage } from './ErrorMessage'

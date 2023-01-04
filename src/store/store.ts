@@ -1,13 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
-import { AppDispatch, RootState } from "./type";
 import cityWeatherSlice from "../features/slices/slices";
+import { AppDispatch, RootState } from "./type";
+
+export const rootReducer = combineReducers({
+  weather: cityWeatherSlice,
+})
 
 export const store = configureStore({
-  reducer: {
-    weather: cityWeatherSlice,
-  },
+  reducer: rootReducer,
+  preloadedState: undefined,
 });
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();

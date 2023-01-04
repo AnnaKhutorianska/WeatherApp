@@ -1,10 +1,8 @@
-import { Autocomplete, TextField } from "@mui/material";
-import React from "react";
-import { Container } from "./App.style";
-import { WeatherCardsList, WeatherDetails } from "./pages";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import { store } from "./store";
+import { WeatherCardsList, WeatherDetails } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +15,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+function App(): JSX.Element {
   return (
     <Provider store={store}>
-      <Container>
-        <RouterProvider router={router} />
-      </Container>
+      <RouterProvider router={router} />
     </Provider>
   );
 }
