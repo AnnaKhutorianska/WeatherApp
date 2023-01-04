@@ -14,6 +14,10 @@ export const CityCardList = () => {
   const error = useAppSelector((state) => state.weather?.error);
 
   useEffect(() => {
+    prepareCitiesState();
+  }, []);
+
+  function prepareCitiesState() {
     const value = JSON.parse(localStorage.getItem("cities")!);
 
     if (value?.length) {
@@ -21,12 +25,9 @@ export const CityCardList = () => {
       return;
     }
 
-    localStorage.setItem(
-      "cities",
-      JSON.stringify(initialCities)
-    );
+    localStorage.setItem("cities", JSON.stringify(initialCities));
     dispatch(getCityListWeather(initialCities));
-  }, []);
+  }
 
   return (
     <Container maxWidth="lg" data-testid="city-card-list">
